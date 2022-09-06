@@ -4,7 +4,8 @@ const retrieveEntries = () => {
   let entries = localStorage.getItem("user-entries");
   if (entries) {
     entries = JSON.parse(entries);
-  } else {
+  } 
+  else {
     entries = [];
   }
   return entries;
@@ -18,13 +19,13 @@ const displayEntries = () => {
 
   const tableEntries = entries
     .map((entry) => {
-      const nameCell = `<td align="center" style="padding:4px 8px">${entry.name}</td>`;
-      const emailCell = `<td align="center" style="padding:4px 8px">${entry.email}</td>`;
-      const passwordCell = `<td align="center" style="padding:4px 8px">${entry.password}</td>`;
-      const dobCell = `<td align="center" style="padding:4px 8px">${entry.dob}</td>`;
-      const termsCell = `<td align="center" style="padding:4px 8px">${entry.terms}</td>`;
+      const name = `<td align="center" style="padding:4px 8px">${entry.name}</td>`;
+      const email = `<td align="center" style="padding:4px 8px">${entry.email}</td>`;
+      const password = `<td align="center" style="padding:4px 8px">${entry.password}</td>`;
+      const dob = `<td align="center" style="padding:4px 8px">${entry.dob}</td>`;
+      const terms = `<td align="center" style="padding:4px 8px">${entry.terms}</td>`;
 
-      const row = `<tr>${nameCell} ${emailCell} ${passwordCell} ${dobCell} ${termsCell}</tr>`;
+      const row = `<tr>${name} ${email} ${password} ${dob} ${terms}</tr>`;
       return row;
     })
     .join("\n");
