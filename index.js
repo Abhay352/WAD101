@@ -19,13 +19,13 @@ const displayEntries = () => {
 
   const tableEntries = entries
     .map((entry) => {
-      const name = `<td align="center" style="padding:4px 8px">${entry.name}</td>`;
-      const email = `<td align="center" style="padding:4px 8px">${entry.email}</td>`;
-      const password = `<td align="center" style="padding:4px 8px">${entry.password}</td>`;
-      const dob = `<td align="center" style="padding:4px 8px">${entry.dob}</td>`;
-      const terms = `<td align="center" style="padding:4px 8px">${entry.terms}</td>`;
+      const name1 = `<td align="center" style="padding:4px 8px">${entry.name}</td>`;
+      const email1 = `<td align="center" style="padding:4px 8px">${entry.email}</td>`;
+      const password1 = `<td align="center" style="padding:4px 8px">${entry.password}</td>`;
+      const dob1 = `<td align="center" style="padding:4px 8px">${entry.dob}</td>`;
+      const terms1 = `<td align="center" style="padding:4px 8px">${entry.terms}</td>`;
 
-      const row = `<tr>${name} ${email} ${password} ${dob} ${terms}</tr>`;
+      const row = `<tr>${name1} ${email1} ${password1} ${dob1} ${terms1}</tr>`;
       return row;
     })
     .join("\n");
